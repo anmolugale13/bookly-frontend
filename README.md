@@ -1,12 +1,51 @@
-# React + Vite
+📚 Bookly — Elegant Book Catalog App
+Bookly is a modern, mobile-friendly book cataloging platform built with React + Vite. It allows users to browse, filter, and review books by genre, rating, and title. Designed with a nude-tone aesthetic and premium UX, Bookly delivers a frustration-free experience across devices.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Live Demo
+👉 https://anmolugale13.github.io/bookly-frontend/
 
-Currently, two official plugins are available:
+🛠 Tech Stack
+| Frontend        | Backend         | Deployment       |
+|-----------------|-----------------|------------------|
+| React + Vite    | Node.js + Express | GitHub Pages     |
+| Inline CSS      | MongoDB Atlas     | HashRouter + 404 fallback |
+| Axios           | JWT Auth          | Vite config base path |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
 
-## Expanding the ESLint configuration
+- 🔍 **Search & Filter** by title, genre, rating, and sort order  
+- 📖 **Book Details** with cover, author, genres, and reviews  
+- 🧠 **User Auth** with login/signup and protected routes  
+- 📝 **Add Book** form with validation and image upload  
+- 📱 **Responsive Design** with mobile-first layout  
+- 🎨 **Nude-tone UI** for elegant, modern aesthetics  
+- 🧭 **404-safe routing** for GitHub Pages reloads  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Folder Structure
+frontend/
+
+├── public/
+
+├── src/
+
+│   ├── api/           # Axios config
+
+│   ├── assets/        # Images and icons
+
+│   ├── components/    # Reusable UI (BookCard, RatingStars)
+
+│   ├── context/       # AuthContext
+
+│   ├── pages/         # Home, Login, Signup, AddBook, BookDetails
+
+│   ├── App.jsx        # Main app with routing
+
+│   └── main.jsx       # Vite entry point
+
+├── index.html
+
+├── vite.config.js     # Base path for GitHub Pages
+
+└── README.md
+
+
