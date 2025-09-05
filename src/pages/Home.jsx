@@ -107,6 +107,7 @@ export default function Home() {
 
 const inputStyle = {
   width: "100%",
+  maxWidth: "280px",
   border: "1px solid #e6ddd6",
   borderRadius: 10,
   padding: "8px 10px",
