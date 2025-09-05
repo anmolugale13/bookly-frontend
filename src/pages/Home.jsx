@@ -1,4 +1,3 @@
-home.jsx
 import { useEffect, useState } from "react";
 import api from "../api/axios";
 import BookCard from "../components/BookCard.jsx";
