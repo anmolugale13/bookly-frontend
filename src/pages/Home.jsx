@@ -1,21 +1,31 @@
+home.jsx
 import { useEffect, useState } from "react";
 import api from "../api/axios";
 import BookCard from "../components/BookCard.jsx";
 
-const grid = {
-  display: "grid",
-  gridTemplateColumns: "repeat(12, 1fr)",
-  gap: 16
+const layout = {
+  display: "flex",
+  flexDirection: "column",
+  gap: 24,
+  padding: 16,
+  maxWidth: 1100,
+  margin: "0 auto"
 };
-const sidebar = {
-  gridColumn: "span 3",
+
+const filterBox = {
   background: "white",
   border: "1px solid #efe7e2",
   borderRadius: 14,
   padding: 16,
-  height: "fit-content"
+  width: "100%",
+  boxSizing: "border-box"
 };
-const content = { gridColumn: "span 9", display: "grid", gap: 16 };
+
+const bookGrid = {
+  display: "grid",
+  gap: 16
+};
+
 
 export default function Home() {
   const [q, setQ] = useState("");
@@ -37,8 +47,8 @@ export default function Home() {
   }, [q, genre, minRating, sort, page]);
 
   return (
-    <div style={grid}>
-      <aside style={sidebar}>
+    <div style={layout}>
+      <aside style={filterBox}>
         <h3 style={{ marginTop: 0, color: "#6e5b4cff" }}>Filters</h3>
         <div style={{ marginBottom: 12 }}>
           <label style={{ display: "block", fontSize: 12, color: "#7a6554" }}>Search</label>
@@ -78,7 +88,7 @@ export default function Home() {
         </div>
       </aside>
 
-      <section style={content}>
+      <section style={bookGrid}>
         <div style={{ display: "grid", gap: 16 }}>
           {books.map((b) => <BookCard key={b._id} book={b} />)}
           {books.length === 0 && <div style={{ color: "#7a6554" }}>No books found.</div>}
